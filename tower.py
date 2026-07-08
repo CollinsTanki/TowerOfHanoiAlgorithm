@@ -1,8 +1,17 @@
-def n_hanoi(n, source, target, auxiliary):
-    if n == 1:
-        print(f"Move disk 1 from {source} to {target}")
-    else:
-        n_hanoi(n-1, source, auxiliary, target)
-        print(f"Move disk {n} from {source} to {target}")
-        n_hanoi(n-1, auxiliary, target, source)
-        
+def print_pyramid(current, rows):
+    # Base case
+    if current > rows:
+        return
+
+    # Print one row
+    spaces = " " * (rows - current)
+    xs = "X " * current
+    print(spaces + xs)
+
+    # Recursive call
+    print_pyramid(current + 1, rows)
+
+
+# Driver code
+rows = 4
+print_pyramid(1, rows)
