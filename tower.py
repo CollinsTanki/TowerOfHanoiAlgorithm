@@ -12,6 +12,6 @@ def print_pyramid(current, rows):
     print_pyramid(current + 1, rows)
 
 
-# Driver code
-rows = 4
+# define the number of rows for the pyramid
+rows = 5
 print_pyramid(1, rows)
